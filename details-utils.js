@@ -54,7 +54,7 @@ class DetailsUtilsForceState {
 		}
 
 		// Force stated based on force-open/force-close attribute value in a media query listener
-		matchmedia.addListener(e => {
+		matchmedia.addEventListener('change', e => {
 			if(e.matches) {
 				this._previousStates[type] = this.detail.open;
 				if(this.detail.open !== (type === "for-open")) {
